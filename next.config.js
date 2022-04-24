@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     domains: ["cdn.traction.one"],
   },
+  async redirects() {
+    return [
+      {
+        source: '/pokemon/0',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;
